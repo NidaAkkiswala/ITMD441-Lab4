@@ -32,3 +32,11 @@
     }
 
 })();
+
+// Remove Get Started Button
+(function () {
+    const ctabtn = document.querySelector("#hero a");
+    if (ctabtn) {
+        ctabtn.remove();
+    }
+})();
