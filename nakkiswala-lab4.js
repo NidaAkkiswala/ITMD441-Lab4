@@ -43,8 +43,15 @@
 
 // Center Alignment
 (function () {
-   const h2elem = document.querySelectorAll("section h2");
-   h2elem.forEach(h2 => {
+   const head2 = document.querySelectorAll("section h2");
+   head2.forEach(h2 => {
     h2.style.textAlign = "center";
    }) 
 })();
+
+//Services Icon Color Change
+(function () {
+    document.querySelectorAll("#services .material-symbols-outlined").forEach(icon => {
+        icon.style.color = "#47C714";
+    })
+ })();
