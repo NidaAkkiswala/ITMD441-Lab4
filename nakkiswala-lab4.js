@@ -40,3 +40,11 @@
         ctabtn.remove();
     }
 })();
+
+// Center Alignment
+(function () {
+   const h2elem = document.querySelectorAll("section h2");
+   h2elem.forEach(h2 => {
+    h2.style.textAlign = "center";
+   }) 
+})();
