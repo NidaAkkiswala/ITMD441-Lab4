@@ -84,3 +84,22 @@
         music.src = "https://picsum.photos/id/453/400/300";
     }
 })();
+
+// Form Submission (Extra Points?)
+(function () {
+    const frm = document.querySelector("form");
+    if (frm) {
+        frm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = frm.querySelector("input[name='name']")?.value.trim();
+            const email = frm.querySelector("input[name='email']")?.value.trim();
+
+            if (name && email) {
+                alert(`Thank you, ${name}! We will be in touch with you shortly at ${email}.`);
+            } else {
+                alert ("Please provide a name and email.");
+            }
+        })
+    }
+})();
