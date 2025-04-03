@@ -1,12 +1,12 @@
 // Nida Akkiswala
 // ITMD 441 - Undergraduate Student
 
-// Change Heading of Page
+// 1. Change Heading of Page
 (function () {
     document.querySelector('#hero h1').textContent = "Uplift Your Brand with Stellar Marketing";
 })();
 
-// Change Subheading of Page
+// 2. Change Subheading of Page
 (function () {
     const subHead = document.querySelector("#hero p");
     if (subHead) {
@@ -14,7 +14,7 @@
     }
 })();
 
-// Change background Image for Heading
+// 3. Change background Image for Heading
 (function () {
     const heroBack = document.querySelector("#hero");
     if (heroBack) {
@@ -22,7 +22,7 @@
     }
 })();
 
-// Match Header Color to Footer Color
+// 4. Match Header Color to Footer Color
 (function () {
     const header = document.querySelector("header");
     const footer = document.querySelector("footer");
@@ -33,7 +33,7 @@
 
 })();
 
-// Remove Get Started Button
+// 5. Remove Get Started Button
 (function () {
     const ctabtn = document.querySelector("#hero a");
     if (ctabtn) {
@@ -41,7 +41,7 @@
     }
 })();
 
-// Center Alignment
+// 6. Center Alignment
 (function () {
    const head2 = document.querySelectorAll("section h2");
    head2.forEach(h2 => {
@@ -49,9 +49,38 @@
    }) 
 })();
 
-//Services Icon Color Change
+// 7. Services Icon Color Change
 (function () {
     document.querySelectorAll("#services .material-symbols-outlined").forEach(icon => {
         icon.style.color = "#47C714";
     })
  })();
+
+ // 8. Icon Change of Digital Marketing
+ (function () {
+    const icon = document.querySelector('span[data-icon="digital"]');
+    if (icon) {
+        icon.textContent = "ads_click";
+    }
+ })();
+
+// 9. Layout Change of Tiles
+(function () {
+    const style = document.createElement("style");
+    style.textContent = `
+        @media (min-width: 1024px) {
+            [data-section="product_cards"] {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+})();
+
+ // 10. Change Image of Musicians
+(function () {
+    const music = document.querySelector('img[alt="Musicians"]');
+    if (music) {
+        music.src = "https://picsum.photos/id/453/400/300";
+    }
+})();
